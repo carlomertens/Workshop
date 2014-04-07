@@ -6,8 +6,6 @@ var HomeView = function (adapter, template, listItemTemplate) {
 		this.el.on('keyup', '.search-key', this.findByName);
 	};
  
-	this.initialize();
-
 	this.render = function() {
 		this.el.html(template());
 		return this;
@@ -18,4 +16,6 @@ var HomeView = function (adapter, template, listItemTemplate) {
 			$('.employee-list').html(listItemTemplate(employees));
 		});
 	};	
+	
+	this.initialize();
 }
